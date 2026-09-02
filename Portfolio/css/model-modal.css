@@ -1,0 +1,220 @@
+.model-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    backdrop-filter: blur(12px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-container {
+    width: min(1200px,92vw);
+    height: min(760px,90vh);
+    background: #111;
+    border-radius: 25px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.modal-left {
+    background: #151515;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.main-image-container {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#mainModelImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity .3s ease, transform .4s ease;
+}
+
+    #mainModelImage.changing {
+        opacity: 0;
+        transform: scale(.96);
+    }
+
+.modal-right {
+    padding: 45px;
+    overflow: auto;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 15px;
+    color: #54ff89;
+}
+
+.pipeline {
+    display: grid;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+    .pipeline div {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        padding-bottom: 12px;
+    }
+
+.tabs {
+    display: flex;
+    gap: 12px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+    .tabs button {
+        padding: 12px 18px;
+        border-radius: 10px;
+        background: #1d1d1d;
+        color: white;
+    }
+
+.tab-content {
+    margin-top: 35px;
+    color: var(--gray);
+}
+
+.close-modal {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #202020;
+    color: white;
+}
+.model-modal {
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+    .model-modal.active {
+        opacity: 1;
+    }
+
+.modal-container {
+    transform: translateY(30px) scale(.97);
+    opacity: 0;
+    transition: transform .4s ease, opacity .4s ease;
+}
+
+.model-modal.active .modal-container {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* ===============================
+   MODEL TABS
+=============================== */
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 40px;
+    padding: 6px;
+    background: #181818;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 13px 16px;
+    background: transparent;
+    color: #888;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+    .tab-btn:hover {
+        color: white;
+        background: rgba(255,255,255,.05);
+    }
+
+    .tab-btn.active {
+        background: var(--primary);
+        color: white;
+        box-shadow: 0 5px 20px rgba(255,77,141,.2);
+    }
+
+
+/* ===============================
+   TAB CONTENT
+=============================== */
+
+.tab-content {
+    margin-top: 30px;
+    min-height: 150px;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+    .tab-content h3 {
+        color: white;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+/* ===============================
+   IMAGE THUMBNAILS
+=============================== */
+
+.image-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #202020;
+    border: 1px solid rgba(255,255,255,.08);
+    opacity: .55;
+    transition: .3s;
+}
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .thumbnail:hover {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+
+    .thumbnail.active {
+        opacity: 1;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 2px rgba(255,77,141,.15), 0 8px 20px rgba(255,77,141,.15);
+    }

@@ -1,0 +1,40 @@
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+    .loader-content h1 {
+        font-size: 90px;
+        font-family: var(--title);
+        color: var(--primary);
+        letter-spacing: 10px;
+    }
+
+    .loader-content p {
+        margin-top: 15px;
+        color: var(--gray);
+    }
+
+.loading-bar {
+    margin-top: 35px;
+    width: 320px;
+    height: 5px;
+    background: #222;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background: var(--primary);
+}

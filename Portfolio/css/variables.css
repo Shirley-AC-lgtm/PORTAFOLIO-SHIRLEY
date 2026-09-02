@@ -1,0 +1,24 @@
+:root {
+    /* Colores */
+
+    --background: #050505;
+    --background-light: #0d0d0d;
+    --card: #111111;
+    --primary: #00E5FF;
+    --secondary: #8A5CFF;
+    --white: #FFFFFF;
+    --gray: #A9A9A9;
+    /* Tipografías */
+
+    --title: 'Space Grotesk',sans-serif;
+    --text: 'Inter',sans-serif;
+    /* Sombras */
+
+    --shadow: 0px 15px 45px rgba(0,229,255,.18);
+    /* Bordes */
+
+    --radius: 18px;
+    /* Animaciones */
+
+    --transition: .35s ease;
+}
