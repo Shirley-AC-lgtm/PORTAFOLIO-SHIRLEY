@@ -972,3 +972,15 @@
         letter-spacing: 0;
     }
 }
+
+@media (max-width: 600px) {
+    .hero-content {
+        transform: translateY(60px);
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-content {
+        transform: translateY(50px);
+    }
+}
