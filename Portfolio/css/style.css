@@ -64,7 +64,7 @@ body {
     .hero h1 {
         font-size: 85px;
         font-family: 'Space Grotesk',sans-serif;
-        letter-spacing: 12px;
+        letter-spacing: 1px;
         margin-bottom: 20px;
         text-shadow: 0 0 30px rgba(0,229,255,.25);
     }
