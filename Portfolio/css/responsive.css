@@ -915,6 +915,44 @@
     }
 }
 
+/* =====================================================
+   HERO NAME — MOBILE FIX
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 150px;
+        padding-bottom: 90px;
+        min-height: 100svh;
+    }
+
+        .hero h1 {
+            font-size: clamp(36px, 10vw, 50px);
+            letter-spacing: 2px;
+            line-height: 1.2;
+            /* Evita cortes extraños dentro de las palabras */
+            word-break: keep-all;
+            overflow-wrap: normal;
+            /* Permite que el nombre ocupe varias líneas,
+           pero nunca rompe una palabra */
+            max-width: 100%;
+        }
+}
+
+@media (max-width: 420px) {
+
+    .hero {
+        padding-top: 145px;
+    }
+
+        .hero h1 {
+            font-size: 36px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+}
+
 @media (max-width: 600px) {
 
     .hero h1 {
