@@ -947,3 +947,41 @@
         letter-spacing: 1px;
     }
 }
+
+@media (max-width: 600px) {
+    nav {
+        padding: 22px 18px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .cv-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    nav {
+        padding: 20px 14px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .cv-button {
+        padding: 11px 17px;
+        font-size: 13px;
+    }
+}
